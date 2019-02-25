@@ -7,15 +7,8 @@ BCG = pd.read_csv('BCG.csv',na_values='n.a')
 DPT = pd.read_csv('DPT.csv',na_values='n.a')
 campak = pd.read_csv('campak.csv',na_values='n.a')
 polio = pd.read_csv('polio.csv',na_values='n.a')
-nama_data = ['BCG','DPT','campak','polio']
 
-#melihat berapa data yang kosong
-print(BCG.info())
-print(DPT.info())
-print(campak.info())
-print(polio.info())
-
-# mengubah data kosong diolah dengan metode interpolasi linear,
+# mengubah data kosong diolah dengan metode interpolasi linear
 BCG = BCG.interpolate()
 DPT = DPT.interpolate()
 campak = campak.interpolate()
